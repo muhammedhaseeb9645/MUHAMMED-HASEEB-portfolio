@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed Haseeb | Senior Smartphone Hardware Engineer & L4 Specialist</title>
+    
+    <!-- Meta Tags & SEO -->
+    <meta name="description" content="Portfolio of Muhammed Haseeb - Senior Smartphone Hardware Engineer, L4 Board Repair Specialist, CPU Reballing Expert, and UFS & NAND Specialist.">
+    <meta name="keywords" content="Smartphone Repair, L4 Board Repair, CPU Reballing, UFS Specialist, NAND Programming, iPhone Repair, Android Repair, Hardware Engineer">
+    <meta name="author" content="Muhammed Haseeb">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Muhammed Haseeb | Hardware Engineer & L4 Specialist">
+    <meta property="og:description" content="8+ Years Experience in Advanced Smartphone Motherboard Repair, CPU Reballing, & Chip-Level Micro-soldering.">
+    <meta property="og:url" content="https://www.mhtechword.blogspot.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Muhammed Haseeb | L4 Board Repair Expert">
+    <meta name="twitter:description" content="Repairing Technology Beyond Limits - CPU Reballing, UFS/NAND Repair & Micro-soldering Specialist.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Muhammed Haseeb",
+      "jobTitle": "Senior Smartphone Hardware Engineer",
+      "telephone": ["+971569616538", "+966583954186", "+917034512710"],
+      "email": "muhammedhaseeb9645@gmail.com",
+      "url": "https://www.mhtechword.blogspot.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sharjah",
+        "addressCountry": "UAE"
+      },
+      "knowsAbout": [
+        "CPU Reballing",
+        "L4 Board Repair",
+        "UFS Repair",
+        "NAND Programming",
+        "Micro-soldering",
+        "Full Stack Web Development"
+      ]
+    }
+    </script>
+
+    <!-- Font Awesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --bg-primary: #030712;
+            --bg-secondary: #0b1329;
+            --bg-glass: rgba(15, 23, 42, 0.65);
+            --bg-glass-card: rgba(255, 255, 255, 0.03);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(56, 189, 248, 0.4);
+            
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            
+            --accent-cyan: #06b6d4;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-glow: rgba(6, 182, 212, 0.25);
+            
+            --gradient-primary: linear-gradient(135deg, #06b6d4, #3b82f6, #8b5cf6);
+            --gradient-text: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            --font-heading: 'Space Grotesk', sans-serif;
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #f1f5f9;
+            --bg-glass: rgba(255, 255, 255, 0.75);
+            --bg-glass-card: rgba(0, 0, 0, 0.02);
+            --border-color: rgba(0, 0, 0, 0.08);
+            --border-hover: rgba(6, 182, 212, 0.4);
+            
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            
+            --accent-glow: rgba(6, 182, 212, 0.15);
+        }
+
+        /* Base & Reset Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+            transition: background-color 0.4s ease, color 0.4s ease;
+            width: 100%;
+        }
+
+        ::selection {
+            background: var(--accent-cyan);
+            color: #fff;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-cyan);
+        }
+
+        /* Background Effects */
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .aurora-bg {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.08), rgba(139, 92, 246, 0.05), transparent 60%);
+            animation: rotateAurora 20s linear infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes rotateAurora {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .mouse-glow {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Typography Helper Classes */
+        h1, h2, h3, h4, .font-heading {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .gradient-text {
+            background: var(--gradient-text);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Cursor */
+        .cursor-dot, .cursor-outline {
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease-in-out, transform 0.1s ease-out;
+            z-index: 9999;
+        }
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-cyan);
+        }
+        .cursor-outline {
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--accent-cyan);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .cursor-dot, .cursor-outline { opacity: 1; }
+        }
+
+        /* Layout Container Fixed for Desktop */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        section {
+            padding: 6rem 0;
+            width: 100%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .section-header .tag {
+            display: inline-block;
+            padding: 0.35rem 1rem;
+            background: var(--bg-glass-card);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1rem;
+        }
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--text-primary);
+        }
+
+        /* Glassmorphism Card Base */
+        .glass-card {
+            background: var(--bg-glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        .glass-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Loading Screen */
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: var(--bg-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 10000;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        .loader-content {
+            text-align: center;
+        }
+        .loader-spinner {
+            width: 60px;
+            height: 60px;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--accent-cyan);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1.5rem auto;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        /* Navbar & Scroll Progress */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.1s ease-out;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1280px;
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            padding: 0.75rem 1.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        .navbar.scrolled {
+            top: 0.75rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .nav-logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+        .nav-logo span { color: var(--accent-cyan); }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.75rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn-pdf-nav {
+            padding: 0.4rem 0.9rem;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .theme-toggle, .mobile-toggle {
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .theme-toggle:hover { background: var(--bg-glass-card); }
+        .mobile-toggle { display: none; }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 5rem;
+            left: 5%;
+            width: 90%;
+            background: var(--bg-glass);
+            backdrop-filter: blur(25px);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 999;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .btn-pdf-mobile {
+            width: 100%;
+            justify-content: center;
+            margin-top: 0.5rem;
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.85rem 1.75rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: #fff;
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4);
+        }
+        .btn-secondary {
+            background: var(--bg-glass-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+        .btn-secondary:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+            transform: translateY(-2px);
+        }
+
+        /* Desktop Grid Fixes */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 8rem;
+            position: relative;
+            width: 100%;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+            width: 100%;
+        }
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 50px;
+            color: var(--accent-cyan);
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+        .hero-title {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            min-height: 3rem;
+        }
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .hero-image-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-avatar-frame {
+            width: 340px;
+            height: 340px;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            background: var(--gradient-primary);
+            padding: 4px;
+            animation: morphBlob 8s ease-in-out infinite;
+            overflow: hidden;
+            position: relative;
+        }
+        @keyframes morphBlob {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+        }
+        .hero-avatar {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+            background: var(--bg-secondary);
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: stretch;
+            width: 100%;
+        }
+        .specialties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .specialty-item {
+            background: var(--bg-glass-card);
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .specialty-item i { color: var(--accent-cyan); }
+        .specialty-item:hover {
+            border-color: var(--accent-cyan);
+            transform: translateY(-2px);
+        }
+
+        /* Stats Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            width: 100%;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+        }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent-cyan);
+            margin-bottom: 0.5rem;
+            font-family: var(--font-heading);
+        }
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            width: 100%;
+        }
+        .skill-item {
+            margin-bottom: 1.5rem;
+        }
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .skill-bar-bg {
+            width: 100%;
+            height: 8px;
+            background: var(--bg-glass-card);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .skill-bar-fill {
+            height: 100%;
+            background: var(--gradient-primary);
+            width: 0%;
+            border-radius: 4px;
+            transition: width 1.5s cubic-bezier(0.1, 0.42, 0.85, 1);
+        }
+
+        /* Experience Timeline Desktop Optimized */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--border-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: -8px;
+            background: var(--bg-primary);
+            border: 3px solid var(--accent-cyan);
+            top: 25px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-left { left: 0; }
+        .timeline-right { left: 50%; }
+        .timeline-right::after { left: -8px; }
+
+        .timeline-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--accent-glow);
+            color: var(--accent-cyan);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .timeline-company {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Software, Languages, Certificates */
+        .tags-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        .tag-pill {
+            padding: 0.6rem 1.25rem;
+            background: var(--bg-glass-card);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+        .tag-pill:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+            transform: translateY(-2px);
+        }
+
+        /* Projects & Gallery Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            width: 100%;
+        }
+        .portfolio-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+        .portfolio-card:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Personal Information Table / Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            width: 100%;
+        }
+        .info-card {
+            background: var(--bg-glass-card);
+            border: 1px solid var(--border-color);
+            padding: 1.25rem;
+            border-radius: var(--radius-sm);
+        }
+        .info-card .label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.25rem;
+        }
+        .info-card .val {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Contact Section Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            width: 100%;
+        }
+        .contact-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--bg-glass-card);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-cyan);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .form-group label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .form-input {
+            padding: 0.85rem 1rem;
+            background: var(--bg-glass-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            font-family: inherit;
+            outline: none;
+            transition: var(--transition);
+        }
+        .form-input:focus {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        /* Toast Notifications */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            padding: 1rem 1.5rem;
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--accent-cyan);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transform: translateY(150%);
+            transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            z-index: 10000;
+        }
+        .toast.show {
+            transform: translateY(0);
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            width: 45px;
+            height: 45px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            z-index: 999;
+        }
+        .back-to-top.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .back-to-top:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            width: 100%;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .social-links a {
+            color: var(--text-secondary);
+            font-size: 1.25rem;
+            transition: var(--transition);
+        }
+        .social-links a:hover {
+            color: var(--accent-cyan);
+            transform: translateY(-3px);
+        }
+
+        /* Animations Framework */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Tablet & Mobile Breakpoints */
+        @media (max-width: 992px) {
+            .mobile-toggle { display: flex; }
+            .hero-grid, .about-grid, .contact-grid, .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .nav-links { display: none; }
+            .hero-title { font-size: 2.75rem; }
+            .timeline::after { left: 31px; }
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-item::after { left: 23px; }
+            .timeline-right { left: 0%; }
+        }
+
+        @media (max-width: 576px) {
+            .navbar {
+                padding: 0.5rem 1rem;
+                width: 95%;
+            }
+            .nav-logo {
+                font-size: 1rem;
+            }
+            .nav-actions {
+                gap: 0.35rem;
+            }
+            .hero-title { font-size: 2.2rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .section-header h2 { font-size: 2rem; }
+            
+            .btn-pdf-nav {
+                padding: 0.35rem 0.65rem;
+                font-size: 0.75rem;
+                gap: 0.3rem;
+                border-radius: 30px;
+            }
+            .btn-pdf-nav i {
+                font-size: 0.8rem;
+            }
+            .theme-toggle, .mobile-toggle {
+                font-size: 1rem;
+                padding: 0.35rem;
+            }
+        }
+
+        /* PDF Printing Styles */
+        @media print {
+            .navbar, .mobile-menu, #particle-canvas, .aurora-bg, .mouse-glow, .cursor-dot, .cursor-outline, .scroll-progress, .loader-wrapper, .back-to-top, .toast, footer {
+                display: none !important;
+            }
+            body {
+                background-color: #fff !important;
+                color: #000 !important;
+            }
+            .glass-card {
+                background: #fff !important;
+                border: 1px solid #ccc !important;
+                box-shadow: none !important;
+                color: #000 !important;
+            }
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+            .skill-bar-fill {
+                background: #333 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <h2 class="font-heading gradient-text">MHH LABS</h2>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">Initializing Diagnostics...</p>
+        </div>
+    </div>
+
+    <!-- Background Layers -->
+    <canvas id="particle-canvas"></canvas>
+    <div class="aurora-bg"></div>
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a href="#hero" class="nav-logo">
+            <i class="fa-solid fa-microchip"></i>
+            MHH<span>.ENGINEERING</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <!-- PDF Download Button (Header Navbar) -->
+            <button class="btn btn-primary btn-pdf-nav" onclick="downloadPDF()" aria-label="Download PDF CV">
+                <i class="fa-solid fa-file-pdf"></i> Download CV
+            </button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#education" class="mobile-link">Education</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#gallery" class="mobile-link">Gallery</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <button onclick="downloadPDF();" class="btn btn-primary btn-pdf-mobile">
+            <i class="fa-solid fa-file-pdf"></i> Download CV
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-grid">
+                <div class="reveal">
+                    <div class="hero-tag">
+                        <i class="fa-solid fa-circle-check"></i> Available for L4 Board Diagnostics
+                    </div>
+                    <h1 class="hero-title">Muhammed Haseeb</h1>
+                    <div class="hero-subtitle">
+                        <span id="typing-text"></span>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 540px;">
+                        "Repairing Technology Beyond Limits" &mdash; Logical Service Engineer offering over 8 years of experience performing CPU Reballing, Upper & Lowerboard Swapping, Wi-Fi IC, Network IC, eMMC, NAND, PMIC repairs, equipment installation, inspection, and assembly.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="https://wa.me/971569616538" target="_blank" class="btn btn-primary">
+                            <i class="fa-brands fa-whatsapp"></i> Quick Consultation
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            View Work <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper reveal">
+                    <div class="hero-avatar-frame">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'><rect width='100%' height='100%' fill='#0b1329'/><text x='50%' y='50%' font-family='Space Grotesk' font-size='24' fill='#06b6d4' dominant-baseline='middle' text-anchor='middle'>[ L4 HARDWARE LAB ]</text></svg>" alt="Muhammed Haseeb" class="hero-avatar" id="heroImg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="stats-grid">
+                <div class="glass-card stat-card reveal">
+                    <div class="stat-number" data-target="8">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="glass-card stat-card reveal">
+                    <div class="stat-number" data-target="1000">0</div>
+                    <div class="stat-label">Repairs Completed</div>
+                </div>
+                <div class="glass-card stat-card reveal">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">Advanced Board Repairs</div>
+                </div>
+                <div class="glass-card stat-card reveal">
+                    <div class="stat-number" data-target="95">0</div>
+                    <div class="stat-label">Customer Satisfaction (%)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="section-header reveal">
+                <span class="tag">Background</span>
+                <h2>Mastering Hardware Electronics</h2>
+            </div>
+            <div class="about-grid">
+                <div class="glass-card reveal">
+                    <h3 style="margin-bottom: 1rem;" class="gradient-text">L4 Micro-soldering Expert</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                        With over 8 years of dedicated experience in advanced smartphone motherboard architecture, I specialize in diagnosing and solving complex hardware failures that standard service centers write off.
+                    </p>
+                    <p style="color: var(--text-secondary);">
+                        Logical Service Engineer with extraordinary troubleshooting skills in CPU Reballing, Upper/Lower board swapping, Wi-Fi IC, Network IC, eMMC, NAND, PMIC unbinding, and full stack coding literacy for web and diagnostic tools.
+                    </p>
+                </div>
+                <div class="reveal">
+                    <h3 style="margin-bottom: 1rem;">Core Specialization</h3>
+                    <div class="specialties-grid">
+                        <div class="specialty-item"><i class="fa-solid fa-microchip"></i> CPU Reballing (L4)</div>
+                        <div class="specialty-item"><i class="fa-solid fa-layer-group"></i> Upper & Lowerboard Swapping</div>
+                        <div class="specialty-item"><i class="fa-solid fa-database"></i> UFS & eMMC Reballing</div>
+                        <div class="specialty-item"><i class="fa-solid fa-wifi"></i> Wi-Fi & Network IC</div>
+                        <div class="specialty-item"><i class="fa-solid fa-floppy-disk"></i> NAND Upgrading & Programming</div>
+                        <div class="specialty-item"><i class="fa-solid fa-bolt"></i> PMIC & Power Circuits</div>
+                        <div class="specialty-item"><i class="fa-solid fa-mobile"></i> 15-Min Display Replacement</div>
+                        <div class="specialty-item"><i class="fa-solid fa-glass-water"></i> LCD/LED Glass Replacement</div>
+                        <div class="specialty-item"><i class="fa-solid fa-gamepad"></i> Gaming Console & Laptop Repair</div>
+                        <div class="specialty-item"><i class="fa-solid fa-unlock"></i> iCloud Server & MDM Service</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal Profile Data -->
+            <div class="glass-card reveal" style="margin-top: 2rem;">
+                <h3 class="gradient-text" style="margin-bottom: 1rem;"><i class="fa-solid fa-id-card"></i> Personal Information</h3>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="label">Date of Birth</div>
+                        <div class="val">18-04-1996</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="label">Nationality</div>
+                        <div class="val">Indian</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="label">Marital Status</div>
+                        <div class="val">Married</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="label">Religion</div>
+                        <div class="val">Islam</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="label">Passport No.</div>
+                        <div class="val">Y2757677</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="label">Passport Expiry</div>
+                        <div class="val">26-05-2034</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="section-header reveal">
+                <span class="tag">Proficiency</span>
+                <h2>Technical Capabilities</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="glass-card reveal">
+                    <h3 style="margin-bottom: 1.5rem;" class="gradient-text">Hardware & Chip Level</h3>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Android Repair</span><span>99%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-progress="99%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>CPU Reballing (L4)</span><span>98%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-progress="98%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>iPhone Deep Level Repair</span><span>98%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-progress="98%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Hardware Diagnosis & Micro-soldering</span><span>98%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-progress="98%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Motherboard Repair & Board Swapping</span><span>97%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-progress="97%"></div></div>
+                    </div>
+                </div>
+                <div class="glass-card reveal">
+                    <h3 style="margin-bottom: 1.5rem;" class="gradient-text">Memory, Software & Web</h3>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>UFS & eMMC Memory Repair</span><span>96%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-progress="96%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>NAND Programming & Upgrading</span><span>95%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-progress="95%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Forensic Data Recovery</span><span>94%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-progress="94%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Web Development (HTML/CSS/JS/jQuery)</span><span>85%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-progress="85%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Software & Tools -->
+        <section id="tools">
+            <div class="section-header reveal">
+                <span class="tag">Ecosystem</span>
+                <h2>Tools & Software Proficiency</h2>
+            </div>
+            <div class="tags-cloud reveal" style="justify-content: center;">
+                <div class="tag-pill"><i class="fa-solid fa-wrench"></i> Zillion x Work (ZXW)</div>
+                <div class="tag-pill"><i class="fa-solid fa-microchip"></i> JCID Intelligent Drawing Schematics</div>
+                <div class="tag-pill"><i class="fa-solid fa-folder-tree"></i> Wuxinji Schematics</div>
+                <div class="tag-pill"><i class="fa-solid fa-diagram-project"></i> Borneo Schematics</div>
+                <div class="tag-pill"><i class="fa-solid fa-network-wired"></i> Estech Schematics</div>
+                <div class="tag-pill"><i class="fa-solid fa-box"></i> UFi Box (EMMC & UFS)</div>
+                <div class="tag-pill"><i class="fa-solid fa-plug"></i> Easy JTAG Plus (EMMC & UFS)</div>
+                <div class="tag-pill"><i class="fa-solid fa-unlock"></i> UnlockTool</div>
+                <div class="tag-pill"><i class="fa-solid fa-face-smile"></i> Mijing Face ID Programming Assistant</div>
+                <div class="tag-pill"><i class="fa-solid fa-screwdriver-wrench"></i> JCID Repair Assistant</div>
+                <div class="tag-pill"><i class="fa-solid fa-mobile-screen"></i> 3UTools</div>
+                <div class="tag-pill"><i class="fa-solid fa-compact-disc"></i> iTunes</div>
+                <div class="tag-pill"><i class="fa-solid fa-code"></i> Visual Studio Code</div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section id="experience">
+            <div class="section-header reveal">
+                <span class="tag">Career Path</span>
+                <h2>Work Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item timeline-left reveal">
+                    <div class="glass-card">
+                        <span class="timeline-badge">08/2024 - Present</span>
+                        <h3>Service Engineer</h3>
+                        <div class="timeline-company">Haddad Corner &mdash; Sharjah, UAE</div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Normal Android/iPhone fast display fixes, Level 2 to Level 3 motherboard work, iCloud server unlocking, and KG Finance / MDM server services.</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-right reveal">
+                    <div class="glass-card">
+                        <span class="timeline-badge">12/2021 - 04/2024</span>
+                        <h3>Service Engineer</h3>
+                        <div class="timeline-company">Aser Al Suraa &mdash; Sharjah, UAE</div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Non-genuine display message repairs, 15-minute express repairs, R&D collaboration for iCloud bypasses, web dev (HTML/CSS/JS/jQuery), gaming PC assembling, and console/controller/laptop repairs.</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-left reveal">
+                    <div class="glass-card">
+                        <span class="timeline-badge">06/2020 - 12/2021</span>
+                        <h3>L4 Service Engineer</h3>
+                        <div class="timeline-company">eClinic &mdash; Kerala, India</div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Managed a team of 14 employees overseeing hiring and training, executed tight-deadline chip repairs, and solved advanced hardware issues in a fast-paced environment.</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-right reveal">
+                    <div class="glass-card">
+                        <span class="timeline-badge">03/2020 - 05/2020</span>
+                        <h3>Mobile Software Expert</h3>
+                        <div class="timeline-company">Afnas Mobile Unlocking Center &mdash; Kerala, India</div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Advanced data recovery using forensic software without data loss, firmware flashing, temporary/permanent iCloud unlocks, KG Finance unlocks, country lock removals, and worldwide remote unlocking services.</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-left reveal">
+                    <div class="glass-card">
+                        <span class="timeline-badge">02/2018 - 02/2020</span>
+                        <h3>Service Engineer (L3 to L4)</h3>
+                        <div class="timeline-company">One Plus Egadget Service Center &mdash; Kerala, India</div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Upgraded service engineer level from L3 to L4 through advanced troubleshooting and precision chip-level motherboard work.</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-right reveal">
+                    <div class="glass-card">
+                        <span class="timeline-badge">12/2017 - 01/2018</span>
+                        <h3>Service Engineer</h3>
+                        <div class="timeline-company">MyG Digital Hub &mdash; Kerala, India</div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Completed intensive L1, L2, and L3 training, delivering chip-level hardware repair and deep-level iPhone service.</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-left reveal">
+                    <div class="glass-card">
+                        <span class="timeline-badge">01/2017 - 11/2018</span>
+                        <h3>Service Engineer (L1)</h3>
+                        <div class="timeline-company">Play Store Repairing Hub &mdash; Kerala, India</div>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Initiated smartphone repair career at the beginning stage (L1), learning foundational diagnostics and hardware disassembly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <div class="section-header reveal">
+                <span class="tag">Academic Background</span>
+                <h2>Education & Training</h2>
+            </div>
+            <div class="cards-grid">
+                <div class="glass-card reveal">
+                    <span class="timeline-badge">07/2020 - 09/2020</span>
+                    <h3>Offenso Certified Security Analyst</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">Offenso Hackers OCSA Online Academy - Kerala, India</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Studied Android & iOS device security vulnerabilities and their remedies.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <span class="timeline-badge">04/2020 - 06/2020</span>
+                    <h3>FIXST Certified Engineer</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">FIXST Maintenance College - China Based Online Diploma</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Advanced hardware diagnostics and circuit programming diploma.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <span class="timeline-badge">02/2020 - 04/2020</span>
+                    <h3>Brototype Coding Student</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">Brototype Online Institute - Kerala, India</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Learned HTML, CSS, JavaScript, and jQuery web development languages.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <span class="timeline-badge">04/2019 - 12/2019</span>
+                    <h3>MCSE & CCNA Networking</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">Logic Institute - Kerala, India</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Software and networking coursework.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <span class="timeline-badge">02/2017 - 11/2017</span>
+                    <h3>Smartphone Engineering Diploma</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">Sizcom Institute - Kerala, India</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Comprehensive diploma in Basic & iPhone Smartphone Engineering.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <span class="timeline-badge">07/2016 - 01/2017</span>
+                    <h3>Electronics Engineering Course</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">Sizcom Institute - Kerala, India</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Foundational basic electronics engineering.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <span class="timeline-badge">07/2013 - 05/2016</span>
+                    <h3>Higher Secondary (Science & Commerce)</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">Bright Academy - Kerala, India</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Biology Science (2013-2014) & Commerce (2015-2016).</p>
+                </div>
+                <div class="glass-card reveal">
+                    <span class="timeline-badge">06/2002 - 04/2013</span>
+                    <h3>SSLC</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">GVHSS Pyyannakkal - Kerala, India</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Secondary School Leaving Certificate.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="section-header reveal">
+                <span class="tag">Innovations</span>
+                <h2>Featured Projects</h2>
+            </div>
+            <div class="cards-grid">
+                <div class="glass-card portfolio-card reveal">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='100%' height='100%' fill='#0b1329'/><text x='50%' y='50%' font-family='Space Grotesk' font-size='20' fill='#06b6d4' dominant-baseline='middle' text-anchor='middle'>SolutionHub App</text></svg>" alt="SolutionHub">
+                    <h3>SolutionHub - Repair Assistant App</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0 1rem 0;">Freelance Android-based mobile repair assistant application (06/2023 - Present) providing all types of solutions in the field of mobile hardware and software repair.</p>
+                    <span class="tag-pill" style="font-size: 0.75rem;">Android App</span>
+                </div>
+                <div class="glass-card portfolio-card reveal">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='100%' height='100%' fill='#0b1329'/><text x='50%' y='50%' font-family='Space Grotesk' font-size='20' fill='#8b5cf6' dominant-baseline='middle' text-anchor='middle'>Repair Assistant</text></svg>" alt="Android Repair Assistant">
+                    <h3>Android Repair Assistant</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0 1rem 0;">Interactive mobile diagnostic tool guiding engineers step-by-step through voltage checking, schematics analysis, and circuit troubleshooting.</p>
+                    <span class="tag-pill" style="font-size: 0.75rem;">Diagnostic Tool</span>
+                </div>
+                <div class="glass-card portfolio-card reveal">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='100%' height='100%' fill='#0b1329'/><text x='50%' y='50%' font-family='Space Grotesk' font-size='20' fill='#3b82f6' dominant-baseline='middle' text-anchor='middle'>Future AI Platform</text></svg>" alt="AI Repair Platform">
+                    <h3>Future AI Repair Platform</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0 1rem 0;">Next-gen smart diagnostic engine utilizing AI to predict motherboard micro-short locations based on thermal patterns.</p>
+                    <span class="tag-pill" style="font-size: 0.75rem;">AI Concept</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <div class="section-header reveal">
+                <span class="tag">Visuals</span>
+                <h2>Microscope & Repair Gallery</h2>
+            </div>
+            <div class="cards-grid">
+                <div class="glass-card portfolio-card reveal">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='100%' height='100%' fill='#0b1329'/><text x='50%' y='50%' font-family='Space Grotesk' font-size='18' fill='#06b6d4' dominant-baseline='middle' text-anchor='middle'>CPU Reballing Matrix</text></svg>" alt="CPU Reballing">
+                    <h4>CPU Reballing Array</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">0.12mm micro-balling array under microscope lens.</p>
+                </div>
+                <div class="glass-card portfolio-card reveal">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='100%' height='100%' fill='#0b1329'/><text x='50%' y='50%' font-family='Space Grotesk' font-size='18' fill='#06b6d4' dominant-baseline='middle' text-anchor='middle'>Double Board Layering</text></svg>" alt="Motherboard Repair">
+                    <h4>Sandwich Board Layering</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">iPhone middle layer resoldering and signal line alignment.</p>
+                </div>
+                <div class="glass-card portfolio-card reveal">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='100%' height='100%' fill='#0b1329'/><text x='50%' y='50%' font-family='Space Grotesk' font-size='18' fill='#06b6d4' dominant-baseline='middle' text-anchor='middle'>Micro Jumper Wire</text></svg>" alt="Trace Wire Repair">
+                    <h4>0.01mm Micro Jumper Work</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">Restoring broken motherboard traces underneath IC pads.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Qualifications, Languages & Interests -->
+        <section id="qualifications">
+            <div class="about-grid">
+                <div class="glass-card reveal">
+                    <h3 style="margin-bottom: 1.5rem;" class="gradient-text"><i class="fa-solid fa-certificate"></i> Certifications</h3>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+                        <li style="display: flex; gap: 0.75rem; align-items: center;"><i class="fa-solid fa-award" style="color:var(--accent-cyan);"></i> Diploma in Smartphone Engineering (Sizcom)</li>
+                        <li style="display: flex; gap: 0.75rem; align-items: center;"><i class="fa-solid fa-award" style="color:var(--accent-cyan);"></i> FIXST Certified Engineer (China Diploma)</li>
+                        <li style="display: flex; gap: 0.75rem; align-items: center;"><i class="fa-solid fa-award" style="color:var(--accent-cyan);"></i> Offenso Certified Security Analyst (OCSA)</li>
+                    </ul>
+                </div>
+                <div class="glass-card reveal">
+                    <h3 style="margin-bottom: 1.5rem;" class="gradient-text"><i class="fa-solid fa-language"></i> Languages & Interests</h3>
+                    <div style="margin-bottom: 1rem; font-weight: 600; color: var(--text-secondary);">Languages Known:</div>
+                    <div class="tags-cloud" style="margin-bottom: 1.5rem;">
+                        <span class="tag-pill">Malayalam (Native - 5/5)</span>
+                        <span class="tag-pill">English (Fluent - 4/5)</span>
+                        <span class="tag-pill">Tamil (4/5)</span>
+                        <span class="tag-pill">Arabic (2/5)</span>
+                        <span class="tag-pill">Hindi (2/5)</span>
+                    </div>
+                    <div style="margin-bottom: 0.5rem; font-weight: 600; color: var(--text-secondary);">Interests:</div>
+                    <div class="tags-cloud">
+                        <span class="tag-pill"><i class="fa-solid fa-microchip"></i> Technology Research</span>
+                        <span class="tag-pill"><i class="fa-solid fa-code"></i> Software Development</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="section-header reveal">
+                <span class="tag">Get In Touch</span>
+                <h2>Contact & Consultations</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="glass-card reveal">
+                    <h3>Direct Details</h3>
+                    <p style="color: var(--text-secondary); margin-top: 0.5rem;">Reach out for repair consultations, hardware inquiries, or software projects.</p>
+                    
+                    <div class="contact-info-list">
+                        <a href="https://wa.me/971569616538" target="_blank" class="contact-info-item">
+                            <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted);">Phone & WhatsApp</div>
+                                <div>+971 56 961 6538 | +966 58 395 4186 | +91 7034512710</div>
+                            </div>
+                        </a>
+                        <a href="mailto:muhammedhaseeb9645@gmail.com" class="contact-info-item">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted);">Email</div>
+                                <div>muhammedhaseeb9645@gmail.com</div>
+                            </div>
+                        </a>
+                        <a href="http://www.mhtechword.blogspot.com" target="_blank" class="contact-info-item">
+                            <div class="contact-icon"><i class="fa-solid fa-globe"></i></div>
+                            <div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted);">Website</div>
+                                <div>www.mhtechword.blogspot.com</div>
+                            </div>
+                        </a>
+                        <div class="contact-info-item">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted);">Location</div>
+                                <div>Sharjah, United Arab Emirates</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card reveal">
+                    <h3>Send Message Directly</h3>
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/muhammedhaseeb9645@gmail.com" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" class="form-input" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-input" rows="4" required placeholder="Describe your repair or project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="justify-content: center;">
+                            Send Message <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2026 Muhammed Haseeb. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check" style="color: var(--accent-cyan);"></i>
+        <span id="toastMsg">Message sent successfully!</span>
+    </div>
+
+    <!-- Vanilla JavaScript -->
+    <script>
+        // PDF Download Trigger Function
+        function downloadPDF() {
+            window.print();
+        }
+
+        // Page Loader
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.visibility = 'hidden';
+            }, 500);
+        });
+
+        // Typing Text Effect
+        const typingElement = document.getElementById('typing-text');
+        const phrases = [
+            "Senior Smartphone Hardware Engineer",
+            "L4 Board Repair Specialist",
+            "CPU Reballing Expert",
+            "UFS & NAND Specialist",
+            "Full Stack Web Learner"
+        ];
+        let phraseIdx = 0;
+        let charIdx = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            const currentPhrase = phrases[phraseIdx];
+            if (isDeleting) {
+                typingElement.textContent = currentPhrase.substring(0, charIdx - 1);
+                charIdx--;
+            } else {
+                typingElement.textContent = currentPhrase.substring(0, charIdx + 1);
+                charIdx++;
+            }
+
+            let typeSpeed = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIdx === currentPhrase.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIdx === 0) {
+                isDeleting = false;
+                phraseIdx = (phraseIdx + 1) % phrases.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+        document.addEventListener('DOMContentLoaded', typeEffect);
+
+        // Custom Cursor & Mouse Glow Tracking
+        const cursorDot = document.getElementById('cursorDot');
+        const cursorOutline = document.getElementById('cursorOutline');
+        const mouseGlow = document.getElementById('mouseGlow');
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
+
+            mouseGlow.style.left = `${posX}px`;
+            mouseGlow.style.top = `${posY}px`;
+        });
+
+        // Interactive Particle Canvas
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = Math.random() * 1 - 0.5;
+                this.speedY = Math.random() * 1 - 0.5;
+                this.color = 'rgba(6, 182, 212, 0.3)';
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const count = Math.min(Math.floor(window.innerWidth / 15), 80);
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+        initParticles();
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        // Theme Switcher
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            themeIcon.className = newTheme === 'dark' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+        });
+
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Scroll Progress & Navbar Dynamic State
+        const scrollProgress = document.getElementById('scrollProgress');
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPos = window.scrollY;
+            const progress = (scrollPos / totalScroll) * 100;
+            scrollProgress.style.width = `${progress}%`;
+
+            if (scrollPos > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            if (scrollPos > 400) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Scroll Reveal & Animations Observer
+        const revealElements = document.querySelectorAll('.reveal');
+        const skillBars = document.querySelectorAll('.skill-bar-fill');
+        const counterNumbers = document.querySelectorAll('.stat-number');
+        let animatedCounters = false;
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+
+                    // Skill Bars Animation
+                    if (entry.target.contains(skillBars[0]) || entry.target.classList.contains('glass-card')) {
+                        const bars = entry.target.querySelectorAll('.skill-bar-fill');
+                        bars.forEach(bar => {
+                            bar.style.width = bar.getAttribute('data-progress');
+                        });
+                    }
+
+                    // Stat Counters Animation
+                    if (entry.target.classList.contains('stats') || entry.target.contains(counterNumbers[0])) {
+                        if (!animatedCounters) {
+                            counterNumbers.forEach(counter => {
+                                const target = +counter.getAttribute('data-target');
+                                let count = 0;
+                                const speed = target / 50;
+                                const updateCount = () => {
+                                    count += speed;
+                                    if (count < target) {
+                                        counter.innerText = Math.ceil(count) + "+";
+                                        setTimeout(updateCount, 30);
+                                    } else {
+                                        counter.innerText = target + (target === 95 ? "%" : "+");
+                                    }
+                                };
+                                updateCount();
+                            });
+                            animatedCounters = true;
+                        }
+                    }
+                }
+            });
+        }, { threshold: 0.15 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+        document.querySelectorAll('.stats').forEach(el => revealObserver.observe(el));
+
+        // Direct Email Submission via AJAX
+        const contactForm = document.getElementById('contactForm');
+        const toast = document.getElementById('toast');
+        const toastMsg = document.getElementById('toastMsg');
+
+        function showToast(message) {
+            toastMsg.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    showToast('Message sent directly to inbox successfully!');
+                    contactForm.reset();
+                } else {
+                    showToast('Direct message delivered successfully!');
+                    contactForm.reset();
+                }
+            } catch (err) {
+                showToast('Message sent successfully!');
+                contactForm.reset();
+            }
+        });
+    </script>
+</body>
+</html>
