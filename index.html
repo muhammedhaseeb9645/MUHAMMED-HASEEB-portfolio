@@ -793,15 +793,14 @@
             gap: 2rem;
             width: 100%;
         }
-        .portfolio-card img {
+        .portfolio-card svg {
             width: 100%;
             height: 200px;
-            object-fit: cover;
             border-radius: var(--radius-sm);
             margin-bottom: 1rem;
             transition: var(--transition);
         }
-        .portfolio-card:hover img {
+        .portfolio-card:hover svg {
             transform: scale(1.04);
         }
 
@@ -1483,19 +1482,52 @@
             </div>
             <div class="cards-grid">
                 <div class="glass-card portfolio-card reveal">
-                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='100%' height='100%' fill='#0b1329'/><text x='50%' y='50%' font-family='Space Grotesk' font-size='20' fill='#06b6d4' dominant-baseline='middle' text-anchor='middle'>SolutionHub App</text></svg>" alt="SolutionHub">
+                    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#0b1329"/>
+                        <rect x="140" y="25" width="120" height="150" rx="16" fill="#1e293b" stroke="#06b6d4" stroke-width="3"/>
+                        <rect x="150" y="40" width="100" height="110" rx="4" fill="#030712"/>
+                        <circle cx="200" cy="32" r="3" fill="#64748b"/>
+                        <rect x="180" y="158" width="40" height="4" rx="2" fill="#64748b"/>
+                        <circle cx="200" cy="75" r="15" fill="#06b6d4" opacity="0.2"/>
+                        <path d="M193 80 L198 85 L208 70" fill="none" stroke="#06b6d4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="160" y="100" width="80" height="6" rx="3" fill="#38bdf8"/>
+                        <rect x="160" y="112" width="60" height="6" rx="3" fill="#94a3b8"/>
+                        <rect x="160" y="124" width="70" height="6" rx="3" fill="#94a3b8"/>
+                        <text x="50%" y="188" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle" font-weight="bold">SolutionHub App</text>
+                    </svg>
                     <h3>SolutionHub - Repair Assistant App</h3>
                     <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0 1rem 0;">Freelance Android-based mobile repair assistant application (06/2023 - Present) providing all types of solutions in the field of mobile hardware and software repair.</p>
                     <span class="tag-pill" style="font-size: 0.75rem;">Android App</span>
                 </div>
                 <div class="glass-card portfolio-card reveal">
-                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='100%' height='100%' fill='#0b1329'/><text x='50%' y='50%' font-family='Space Grotesk' font-size='20' fill='#8b5cf6' dominant-baseline='middle' text-anchor='middle'>Repair Assistant</text></svg>" alt="Android Repair Assistant">
+                    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#0b1329"/>
+                        <rect x="130" y="30" width="140" height="140" rx="10" fill="#1e293b" stroke="#8b5cf6" stroke-width="3"/>
+                        <line x1="160" y1="60" x2="240" y2="60" stroke="#8b5cf6" stroke-width="2"/>
+                        <line x1="160" y1="80" x2="240" y2="80" stroke="#8b5cf6" stroke-width="2"/>
+                        <line x1="160" y1="100" x2="240" y2="100" stroke="#8b5cf6" stroke-width="2"/>
+                        <line x1="200" y1="60" x2="200" y2="140" stroke="#8b5cf6" stroke-width="2"/>
+                        <circle cx="160" cy="60" r="5" fill="#38bdf8"/>
+                        <circle cx="240" cy="80" r="5" fill="#38bdf8"/>
+                        <circle cx="200" cy="100" r="5" fill="#c084fc"/>
+                        <path d="M150 140 L170 120 L190 135 L210 110 L250 140" fill="none" stroke="#06b6d4" stroke-width="3" stroke-linecap="round"/>
+                        <text x="50%" y="188" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#8b5cf6" text-anchor="middle" font-weight="bold">Android Diagnostic Schematic</text>
+                    </svg>
                     <h3>Android Repair Assistant</h3>
                     <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0 1rem 0;">Interactive mobile diagnostic tool guiding engineers step-by-step through voltage checking, schematics analysis, and circuit troubleshooting.</p>
                     <span class="tag-pill" style="font-size: 0.75rem;">Diagnostic Tool</span>
                 </div>
                 <div class="glass-card portfolio-card reveal">
-                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='100%' height='100%' fill='#0b1329'/><text x='50%' y='50%' font-family='Space Grotesk' font-size='20' fill='#3b82f6' dominant-baseline='middle' text-anchor='middle'>Future AI Platform</text></svg>" alt="AI Repair Platform">
+                    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#0b1329"/>
+                        <circle cx="200" cy="90" r="45" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4 4"/>
+                        <circle cx="200" cy="90" r="25" fill="#06b6d4" opacity="0.1" stroke="#06b6d4" stroke-width="2"/>
+                        <path d="M200 65 L200 115 M175 90 L225 90" stroke="#06b6d4" stroke-width="1.5"/>
+                        <circle cx="200" cy="90" r="6" fill="#38bdf8"/>
+                        <path d="M140 150 C 170 130, 230 130, 260 150" fill="none" stroke="#818cf8" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M130 60 L150 75 M270 60 L250 75 M130 120 L150 105 M270 120 L250 105" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+                        <text x="50%" y="188" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#3b82f6" text-anchor="middle" font-weight="bold">AI Thermal Diagnostic Engine</text>
+                    </svg>
                     <h3>Future AI Repair Platform</h3>
                     <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0 1rem 0;">Next-gen smart diagnostic engine utilizing AI to predict motherboard micro-short locations based on thermal patterns.</p>
                     <span class="tag-pill" style="font-size: 0.75rem;">AI Concept</span>
@@ -1511,17 +1543,42 @@
             </div>
             <div class="cards-grid">
                 <div class="glass-card portfolio-card reveal">
-                    <img src="data:image/svg+xml;utf8,<svg xmlns='https://www.svgrepo.com/show/296395/microchip.svg' width='400' height='200' viewBox='0 0 400 200'><rect width='100%' height='100%' fill='#0b1329'/><rect x='130' y='30' width='140' height='140' rx='10' fill='%231e293b' stroke='%2306b6d4' stroke-width='2'/><pattern id='grid' width='16' height='16' patternUnits='userSpaceOnUse'><circle cx='8' cy='8' r='3' fill='%2306b6d4'/></pattern><rect x='140' y='40' width='120' height='120' fill='url(%23grid)'/><text x='50%' y='90%' font-family='Space Grotesk' font-size='14' fill='#06b6d4' text-anchor='middle'>CPU BGA BALLING ARRAY</text></svg>" alt="CPU Reballing">
+                    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#0b1329"/>
+                        <rect x="130" y="30" width="140" height="140" rx="10" fill="#1e293b" stroke="#06b6d4" stroke-width="2"/>
+                        <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse">
+                            <circle cx="8" cy="8" r="3" fill="#06b6d4"/>
+                        </pattern>
+                        <rect x="140" y="40" width="120" height="120" fill="url(#grid)"/>
+                        <text x="50%" y="188" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle" font-weight="bold">CPU BGA BALLING ARRAY</text>
+                    </svg>
                     <h4>CPU Reballing Array</h4>
                     <p style="font-size: 0.8rem; color: var(--text-muted);">0.12mm micro-balling array under microscope lens.</p>
                 </div>
                 <div class="glass-card portfolio-card reveal">
-                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='100%' height='100%' fill='#0b1329'/><text x='50%' y='50%' font-family='Space Grotesk' font-size='18' fill='#06b6d4' dominant-baseline='middle' text-anchor='middle'>Double Board Layering</text></svg>" alt="Motherboard Repair">
+                    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#0b1329"/>
+                        <rect x="120" y="40" width="160" height="45" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+                        <rect x="120" y="105" width="160" height="45" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+                        <line x1="140" y1="85" x2="140" y2="105" stroke="#06b6d4" stroke-width="3"/>
+                        <line x1="170" y1="85" x2="170" y2="105" stroke="#06b6d4" stroke-width="3"/>
+                        <line x1="200" y1="85" x2="200" y2="105" stroke="#06b6d4" stroke-width="3"/>
+                        <line x1="230" y1="85" x2="230" y2="105" stroke="#06b6d4" stroke-width="3"/>
+                        <line x1="260" y1="85" x2="260" y2="105" stroke="#06b6d4" stroke-width="3"/>
+                        <text x="50%" y="188" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle" font-weight="bold">DOUBLE BOARD LAYERING</text>
+                    </svg>
                     <h4>Sandwich Board Layering</h4>
                     <p style="font-size: 0.8rem; color: var(--text-muted);">iPhone middle layer resoldering and signal line alignment.</p>
                 </div>
                 <div class="glass-card portfolio-card reveal">
-                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='100%' height='100%' fill='#0b1329'/><text x='50%' y='50%' font-family='Space Grotesk' font-size='18' fill='#06b6d4' dominant-baseline='middle' text-anchor='middle'>Micro Jumper Wire</text></svg>" alt="Trace Wire Repair">
+                    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#0b1329"/>
+                        <path d="M 80 140 Q 150 40 200 110 T 320 60" fill="none" stroke="#06b6d4" stroke-width="3" stroke-linecap="round"/>
+                        <circle cx="80" cy="140" r="6" fill="#38bdf8"/>
+                        <circle cx="320" cy="60" r="6" fill="#38bdf8"/>
+                        <path d="M 180 30 L 200 80 L 220 30" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+                        <text x="50%" y="188" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle" font-weight="bold">MICRO JUMPER WIRE</text>
+                    </svg>
                     <h4>0.01mm Micro Jumper Work</h4>
                     <p style="font-size: 0.8rem; color: var(--text-muted);">Restoring broken motherboard traces underneath IC pads.</p>
                 </div>
