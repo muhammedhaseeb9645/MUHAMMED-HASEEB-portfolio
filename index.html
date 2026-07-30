@@ -793,15 +793,29 @@
             gap: 2rem;
             width: 100%;
         }
-        .portfolio-card svg {
+        
+        /* PNG Image Container Styling for Projects & Gallery */
+        .portfolio-img-container {
             width: 100%;
             height: 200px;
             border-radius: var(--radius-sm);
             margin-bottom: 1rem;
-            transition: var(--transition);
+            overflow: hidden;
+            position: relative;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
         }
-        .portfolio-card:hover svg {
-            transform: scale(1.04);
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.5s ease, filter 0.5s ease;
+            display: block;
+        }
+        .portfolio-card:hover .portfolio-img {
+            transform: scale(1.08);
+            filter: brightness(1.1);
         }
 
         /* Personal Information Table / Grid */
@@ -1482,52 +1496,25 @@
             </div>
             <div class="cards-grid">
                 <div class="glass-card portfolio-card reveal">
-                    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="100%" height="100%" fill="#0b1329"/>
-                        <rect x="140" y="25" width="120" height="150" rx="16" fill="#1e293b" stroke="#06b6d4" stroke-width="3"/>
-                        <rect x="150" y="40" width="100" height="110" rx="4" fill="#030712"/>
-                        <circle cx="200" cy="32" r="3" fill="#64748b"/>
-                        <rect x="180" y="158" width="40" height="4" rx="2" fill="#64748b"/>
-                        <circle cx="200" cy="75" r="15" fill="#06b6d4" opacity="0.2"/>
-                        <path d="M193 80 L198 85 L208 70" fill="none" stroke="#06b6d4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <rect x="160" y="100" width="80" height="6" rx="3" fill="#38bdf8"/>
-                        <rect x="160" y="112" width="60" height="6" rx="3" fill="#94a3b8"/>
-                        <rect x="160" y="124" width="70" height="6" rx="3" fill="#94a3b8"/>
-                        <text x="50%" y="188" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle" font-weight="bold">SolutionHub App</text>
-                    </svg>
+                    <div class="portfolio-img-container">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop" alt="SolutionHub - Repair Assistant App" class="portfolio-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop';">
+                    </div>
                     <h3>SolutionHub - Repair Assistant App</h3>
                     <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0 1rem 0;">Freelance Android-based mobile repair assistant application (06/2023 - Present) providing all types of solutions in the field of mobile hardware and software repair.</p>
                     <span class="tag-pill" style="font-size: 0.75rem;">Android App</span>
                 </div>
                 <div class="glass-card portfolio-card reveal">
-                    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="100%" height="100%" fill="#0b1329"/>
-                        <rect x="130" y="30" width="140" height="140" rx="10" fill="#1e293b" stroke="#8b5cf6" stroke-width="3"/>
-                        <line x1="160" y1="60" x2="240" y2="60" stroke="#8b5cf6" stroke-width="2"/>
-                        <line x1="160" y1="80" x2="240" y2="80" stroke="#8b5cf6" stroke-width="2"/>
-                        <line x1="160" y1="100" x2="240" y2="100" stroke="#8b5cf6" stroke-width="2"/>
-                        <line x1="200" y1="60" x2="200" y2="140" stroke="#8b5cf6" stroke-width="2"/>
-                        <circle cx="160" cy="60" r="5" fill="#38bdf8"/>
-                        <circle cx="240" cy="80" r="5" fill="#38bdf8"/>
-                        <circle cx="200" cy="100" r="5" fill="#c084fc"/>
-                        <path d="M150 140 L170 120 L190 135 L210 110 L250 140" fill="none" stroke="#06b6d4" stroke-width="3" stroke-linecap="round"/>
-                        <text x="50%" y="188" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#8b5cf6" text-anchor="middle" font-weight="bold">Android Diagnostic Schematic</text>
-                    </svg>
+                    <div class="portfolio-img-container">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop" alt="Android Repair Assistant" class="portfolio-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop';">
+                    </div>
                     <h3>Android Repair Assistant</h3>
                     <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0 1rem 0;">Interactive mobile diagnostic tool guiding engineers step-by-step through voltage checking, schematics analysis, and circuit troubleshooting.</p>
                     <span class="tag-pill" style="font-size: 0.75rem;">Diagnostic Tool</span>
                 </div>
                 <div class="glass-card portfolio-card reveal">
-                    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="100%" height="100%" fill="#0b1329"/>
-                        <circle cx="200" cy="90" r="45" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4 4"/>
-                        <circle cx="200" cy="90" r="25" fill="#06b6d4" opacity="0.1" stroke="#06b6d4" stroke-width="2"/>
-                        <path d="M200 65 L200 115 M175 90 L225 90" stroke="#06b6d4" stroke-width="1.5"/>
-                        <circle cx="200" cy="90" r="6" fill="#38bdf8"/>
-                        <path d="M140 150 C 170 130, 230 130, 260 150" fill="none" stroke="#818cf8" stroke-width="3" stroke-linecap="round"/>
-                        <path d="M130 60 L150 75 M270 60 L250 75 M130 120 L150 105 M270 120 L250 105" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
-                        <text x="50%" y="188" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#3b82f6" text-anchor="middle" font-weight="bold">AI Thermal Diagnostic Engine</text>
-                    </svg>
+                    <div class="portfolio-img-container">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop" alt="Future AI Repair Platform" class="portfolio-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop';">
+                    </div>
                     <h3>Future AI Repair Platform</h3>
                     <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0 1rem 0;">Next-gen smart diagnostic engine utilizing AI to predict motherboard micro-short locations based on thermal patterns.</p>
                     <span class="tag-pill" style="font-size: 0.75rem;">AI Concept</span>
@@ -1543,42 +1530,23 @@
             </div>
             <div class="cards-grid">
                 <div class="glass-card portfolio-card reveal">
-                    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="100%" height="100%" fill="#0b1329"/>
-                        <rect x="130" y="30" width="140" height="140" rx="10" fill="#1e293b" stroke="#06b6d4" stroke-width="2"/>
-                        <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse">
-                            <circle cx="8" cy="8" r="3" fill="#06b6d4"/>
-                        </pattern>
-                        <rect x="140" y="40" width="120" height="120" fill="url(#grid)"/>
-                        <text x="50%" y="188" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle" font-weight="bold">CPU BGA BALLING ARRAY</text>
-                    </svg>
+                    <div class="portfolio-img-container">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop" alt="CPU BGA Balling Array" class="portfolio-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop';">
+                    </div>
                     <h4>CPU Reballing Array</h4>
                     <p style="font-size: 0.8rem; color: var(--text-muted);">0.12mm micro-balling array under microscope lens.</p>
                 </div>
                 <div class="glass-card portfolio-card reveal">
-                    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="100%" height="100%" fill="#0b1329"/>
-                        <rect x="120" y="40" width="160" height="45" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
-                        <rect x="120" y="105" width="160" height="45" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
-                        <line x1="140" y1="85" x2="140" y2="105" stroke="#06b6d4" stroke-width="3"/>
-                        <line x1="170" y1="85" x2="170" y2="105" stroke="#06b6d4" stroke-width="3"/>
-                        <line x1="200" y1="85" x2="200" y2="105" stroke="#06b6d4" stroke-width="3"/>
-                        <line x1="230" y1="85" x2="230" y2="105" stroke="#06b6d4" stroke-width="3"/>
-                        <line x1="260" y1="85" x2="260" y2="105" stroke="#06b6d4" stroke-width="3"/>
-                        <text x="50%" y="188" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle" font-weight="bold">DOUBLE BOARD LAYERING</text>
-                    </svg>
+                    <div class="portfolio-img-container">
+                        <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=800&auto=format&fit=crop" alt="Sandwich Board Layering" class="portfolio-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop';">
+                    </div>
                     <h4>Sandwich Board Layering</h4>
                     <p style="font-size: 0.8rem; color: var(--text-muted);">iPhone middle layer resoldering and signal line alignment.</p>
                 </div>
                 <div class="glass-card portfolio-card reveal">
-                    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="100%" height="100%" fill="#0b1329"/>
-                        <path d="M 80 140 Q 150 40 200 110 T 320 60" fill="none" stroke="#06b6d4" stroke-width="3" stroke-linecap="round"/>
-                        <circle cx="80" cy="140" r="6" fill="#38bdf8"/>
-                        <circle cx="320" cy="60" r="6" fill="#38bdf8"/>
-                        <path d="M 180 30 L 200 80 L 220 30" fill="none" stroke="#8b5cf6" stroke-width="2"/>
-                        <text x="50%" y="188" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle" font-weight="bold">MICRO JUMPER WIRE</text>
-                    </svg>
+                    <div class="portfolio-img-container">
+                        <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop" alt="0.01mm Micro Jumper Work" class="portfolio-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop';">
+                    </div>
                     <h4>0.01mm Micro Jumper Work</h4>
                     <p style="font-size: 0.8rem; color: var(--text-muted);">Restoring broken motherboard traces underneath IC pads.</p>
                 </div>
@@ -1619,6 +1587,7 @@
         <section id="contact">
             <div class="section-header reveal">
                 <span class="tag">Get In Touch</span>
+                料理
                 <h2>Contact & Consultations</h2>
             </div>
             <div class="contact-grid">
@@ -1900,163 +1869,132 @@
         }
         animateParticles();
 
-        // Theme Switcher
+        // Theme Toggle Functionality
         const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = themeToggle.querySelector('i');
-
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', newTheme);
-            themeIcon.className = newTheme === 'dark' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+            themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
         });
 
         // Mobile Menu Toggle
         const mobileToggle = document.getElementById('mobileToggle');
         const mobileMenu = document.getElementById('mobileMenu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
         mobileToggle.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');
+            mobileToggle.innerHTML = mobileMenu.classList.contains('active') ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
         });
 
-        mobileLinks.forEach(link => {
+        document.querySelectorAll('.mobile-link').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
+                mobileToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
             });
         });
 
-        // PRO ANIMATION 3: Scroll Progress, Navbar Active States & Back To Top
+        // Scroll Progress Bar & Back to Top Visibility
         const scrollProgress = document.getElementById('scrollProgress');
-        const navbar = document.getElementById('navbar');
         const backToTop = document.getElementById('backToTop');
-        const sections = document.querySelectorAll('section');
-        const navAnchorLinks = document.querySelectorAll('.nav-links a');
+        const navbar = document.getElementById('navbar');
 
         window.addEventListener('scroll', () => {
             const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPos = window.scrollY;
-            const progress = (scrollPos / totalScroll) * 100;
+            const currentScroll = window.scrollY;
+            const progress = (currentScroll / totalScroll) * 100;
             scrollProgress.style.width = `${progress}%`;
 
-            if (scrollPos > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-
-            if (scrollPos > 400) {
+            if (currentScroll > 300) {
                 backToTop.classList.add('show');
             } else {
                 backToTop.classList.remove('show');
             }
 
-            // Scrollspy Active Links Update
-            let currentSec = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 150;
-                if (scrollPos >= sectionTop) {
-                    currentSec = section.getAttribute('id');
-                }
-            });
-
-            navAnchorLinks.forEach(a => {
-                a.classList.remove('active');
-                if (a.getAttribute('href') === `#${currentSec}`) {
-                    a.classList.add('active');
-                }
-            });
+            if (currentScroll > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
         });
 
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // PRO ANIMATION 4: Multi-Directional Scroll Reveal Observer
+        // Intersection Observer for Reveal Animations & Stats Counter
         const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-        const skillBars = document.querySelectorAll('.skill-bar-fill');
-        const counterNumbers = document.querySelectorAll('.stat-number');
-        let animatedCounters = false;
-
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
+                    
+                    // Trigger Skill Bars if inside intersecting card
+                    const skillBars = entry.target.querySelectorAll('.skill-bar-fill');
+                    skillBars.forEach(bar => {
+                        bar.style.width = bar.getAttribute('data-progress');
+                    });
 
-                    // Skill Bars Animation
-                    if (entry.target.contains(skillBars[0]) || entry.target.classList.contains('glass-card')) {
-                        const bars = entry.target.querySelectorAll('.skill-bar-fill');
-                        bars.forEach(bar => {
-                            bar.style.width = bar.getAttribute('data-progress');
-                        });
-                    }
-
-                    // Stat Counters Animation
-                    if (entry.target.classList.contains('stats') || entry.target.contains(counterNumbers[0])) {
-                        if (!animatedCounters) {
-                            counterNumbers.forEach(counter => {
-                                const target = +counter.getAttribute('data-target');
-                                let count = 0;
-                                const speed = target / 50;
-                                const updateCount = () => {
-                                    count += speed;
-                                    if (count < target) {
-                                        counter.innerText = Math.ceil(count) + "+";
-                                        setTimeout(updateCount, 30);
-                                    } else {
-                                        counter.innerText = target + (target === 95 ? "%" : "+");
-                                    }
-                                };
-                                updateCount();
-                            });
-                            animatedCounters = true;
+                    // Trigger Stat Counter
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(num => {
+                        if (!num.classList.contains('counted')) {
+                            num.classList.add('counted');
+                            const target = +num.getAttribute('data-target');
+                            let count = 0;
+                            const speed = target / 50;
+                            const updateCount = () => {
+                                count += speed;
+                                if (count < target) {
+                                    num.innerText = Math.ceil(count).toLocaleString() + (target === 99 ? '' : '+');
+                                    setTimeout(updateCount, 30);
+                                } else {
+                                    num.innerText = target.toLocaleString() + (target === 99 ? '%' : '+');
+                                }
+                            };
+                            updateCount();
                         }
-                    }
+                    });
                 }
             });
         }, { threshold: 0.15 });
 
         revealElements.forEach(el => revealObserver.observe(el));
-        document.querySelectorAll('.stats').forEach(el => revealObserver.observe(el));
 
-        // Direct Email Submission via AJAX
+        // Formspree Contact Form Handler
         const contactForm = document.getElementById('contactForm');
         const toast = document.getElementById('toast');
-        const toastMsg = document.getElementById('toastMsg');
 
-        function showToast(message) {
-            toastMsg.textContent = message;
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const formData = new FormData(contactForm);
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    if (response.ok) {
+                        showToast('Message sent successfully!');
+                        contactForm.reset();
+                    } else {
+                        showToast('Error sending message. Try again!');
+                    }
+                } catch (err) {
+                    showToast('Connection error. Please try WhatsApp!');
+                }
+            });
+        }
+
+        function showToast(msg) {
+            document.getElementById('toastMsg').innerText = msg;
             toast.classList.add('show');
             setTimeout(() => {
                 toast.classList.remove('show');
-            }, 3000);
+            }, 4000);
         }
-
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const formData = new FormData(contactForm);
-            
-            try {
-                const response = await fetch(contactForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    showToast('Message sent directly to inbox successfully!');
-                    contactForm.reset();
-                } else {
-                    showToast('Direct message delivered successfully!');
-                    contactForm.reset();
-                }
-            } catch (err) {
-                showToast('Message sent successfully!');
-                contactForm.reset();
-            }
-        });
     </script>
 </body>
 </html>
