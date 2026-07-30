@@ -261,7 +261,7 @@
             color: var(--text-primary);
         }
 
-        /* Glassmorphism Card Base */
+        /* Glassmorphism Card Base & 3D Pro Click Animations */
         .glass-card {
             background: var(--bg-glass);
             backdrop-filter: blur(16px);
@@ -269,15 +269,39 @@
             border: 1px solid var(--border-color);
             border-radius: var(--radius-md);
             padding: 2rem;
-            transition: var(--transition);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
             height: 100%;
+            transform-style: preserve-3d;
+            perspective: 1000px;
         }
         .glass-card:hover {
             border-color: var(--border-hover);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 35px rgba(6, 182, 212, 0.15), 0 0 20px var(--accent-glow);
+        }
+
+        /* Click Ripple Effect Style */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+            background: rgba(6, 182, 212, 0.35);
+            pointer-events: none;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Click Active Press Animation */
+        .glass-card:active, .btn:active, .tag-pill:active, .specialty-item:active {
+            transform: scale(0.97) !important;
+            transition: transform 0.1s ease;
         }
 
         /* Loading Screen */
@@ -367,6 +391,20 @@
             font-size: 0.9rem;
             font-weight: 500;
             transition: var(--transition);
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--accent-cyan);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
         }
         .nav-links a:hover {
             color: var(--accent-cyan);
@@ -387,7 +425,29 @@
             gap: 0.5rem;
         }
 
-        .theme-toggle, .mobile-toggle {
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: var(--transition);
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+        .theme-toggle:hover { 
+            background: var(--bg-glass-card);
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+        
+        .mobile-toggle {
             background: transparent;
             border: none;
             color: var(--text-primary);
@@ -396,12 +456,10 @@
             padding: 0.5rem;
             border-radius: 50%;
             transition: var(--transition);
-            display: flex;
+            display: none;
             align-items: center;
             justify-content: center;
         }
-        .theme-toggle:hover { background: var(--bg-glass-card); }
-        .mobile-toggle { display: none; }
 
         .mobile-menu {
             display: none;
@@ -434,6 +492,9 @@
             margin-top: 0.5rem;
             padding: 0.75rem 1rem;
             font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         /* Buttons */
@@ -447,7 +508,7 @@
             font-size: 0.95rem;
             text-decoration: none;
             cursor: pointer;
-            transition: var(--transition);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
             border: none;
             position: relative;
             overflow: hidden;
@@ -458,7 +519,7 @@
             box-shadow: 0 4px 15px var(--accent-glow);
         }
         .btn-primary:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px) scale(1.02);
             box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4);
         }
         .btn-secondary {
@@ -469,7 +530,7 @@
         .btn-secondary:hover {
             border-color: var(--accent-cyan);
             color: var(--accent-cyan);
-            transform: translateY(-2px);
+            transform: translateY(-3px) scale(1.02);
         }
 
         /* Desktop Grid Fixes */
@@ -531,6 +592,7 @@
             animation: morphBlob 8s ease-in-out infinite;
             overflow: hidden;
             position: relative;
+            box-shadow: 0 0 30px rgba(6, 182, 212, 0.3);
         }
         @keyframes morphBlob {
             0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
@@ -568,11 +630,15 @@
             gap: 0.75rem;
             font-size: 0.9rem;
             transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
         .specialty-item i { color: var(--accent-cyan); }
         .specialty-item:hover {
             border-color: var(--accent-cyan);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(6, 182, 212, 0.15);
         }
 
         /* Stats Section */
@@ -665,6 +731,12 @@
             top: 25px;
             border-radius: 50%;
             z-index: 1;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .timeline-item:hover::after {
+            transform: scale(1.4);
+            background: var(--accent-cyan);
+            box-shadow: 0 0 10px var(--accent-cyan);
         }
         .timeline-left { left: 0; }
         .timeline-right { left: 50%; }
@@ -703,11 +775,15 @@
             align-items: center;
             gap: 0.5rem;
             transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
         .tag-pill:hover {
             border-color: var(--accent-cyan);
             color: var(--accent-cyan);
-            transform: translateY(-2px);
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 5px 15px rgba(6, 182, 212, 0.2);
         }
 
         /* Projects & Gallery Cards Grid */
@@ -726,7 +802,7 @@
             transition: var(--transition);
         }
         .portfolio-card:hover img {
-            transform: scale(1.03);
+            transform: scale(1.04);
         }
 
         /* Personal Information Table / Grid */
@@ -742,6 +818,11 @@
             border: 1px solid var(--border-color);
             padding: 1.25rem;
             border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+        .info-card:hover {
+            border-color: var(--accent-cyan);
+            transform: translateY(-3px);
         }
         .info-card .label {
             font-size: 0.8rem;
@@ -775,6 +856,13 @@
             gap: 1rem;
             text-decoration: none;
             color: var(--text-primary);
+            transition: var(--transition);
+            padding: 0.5rem;
+            border-radius: var(--radius-sm);
+        }
+        .contact-info-item:hover {
+            background: var(--bg-glass-card);
+            transform: translateX(5px);
         }
         .contact-icon {
             width: 48px;
@@ -788,6 +876,12 @@
             color: var(--accent-cyan);
             font-size: 1.2rem;
             flex-shrink: 0;
+            transition: var(--transition);
+        }
+        .contact-info-item:hover .contact-icon {
+            background: var(--accent-cyan);
+            color: #fff;
+            box-shadow: 0 0 15px var(--accent-cyan);
         }
         .contact-form {
             display: flex;
@@ -868,6 +962,8 @@
         .back-to-top:hover {
             border-color: var(--accent-cyan);
             color: var(--accent-cyan);
+            transform: translateY(-4px);
+            box-shadow: 0 0 15px var(--accent-cyan);
         }
 
         /* Footer */
@@ -895,15 +991,32 @@
             transform: translateY(-3px);
         }
 
-        /* Animations Framework */
+        /* Advanced Pro Animations Framework */
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            transform: translateY(40px) scale(0.96);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
         }
         .reveal.active {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) scale(1);
+        }
+
+        /* Staggered Scroll Animations */
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-left.active, .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
         }
 
         /* Tablet & Mobile Breakpoints */
@@ -925,6 +1038,7 @@
             }
             .timeline-item::after { left: 23px; }
             .timeline-right { left: 0%; }
+            .btn-pdf-nav { display: none; }
         }
 
         @media (max-width: 576px) {
@@ -942,18 +1056,11 @@
             .stats-grid { grid-template-columns: 1fr; }
             .section-header h2 { font-size: 2rem; }
             
-            .btn-pdf-nav {
-                padding: 0.35rem 0.65rem;
-                font-size: 0.75rem;
-                gap: 0.3rem;
-                border-radius: 30px;
-            }
-            .btn-pdf-nav i {
-                font-size: 0.8rem;
-            }
             .theme-toggle, .mobile-toggle {
                 font-size: 1rem;
                 padding: 0.35rem;
+                width: 34px;
+                height: 34px;
             }
         }
 
@@ -972,7 +1079,7 @@
                 box-shadow: none !important;
                 color: #000 !important;
             }
-            .reveal {
+            .reveal, .reveal-left, .reveal-right {
                 opacity: 1 !important;
                 transform: none !important;
             }
@@ -1054,7 +1161,7 @@
         <!-- Hero Section -->
         <section class="hero" id="hero">
             <div class="hero-grid">
-                <div class="reveal">
+                <div class="reveal-left">
                     <div class="hero-tag">
                         <i class="fa-solid fa-circle-check"></i> Available for L4 Board Diagnostics
                     </div>
@@ -1074,7 +1181,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="hero-image-wrapper reveal">
+                <div class="hero-image-wrapper reveal-right">
                     <div class="hero-avatar-frame">
                         <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'><rect width='100%' height='100%' fill='#0b1329'/><text x='50%' y='50%' font-family='Space Grotesk' font-size='24' fill='#06b6d4' dominant-baseline='middle' text-anchor='middle'>[ L4 HARDWARE LAB ]</text></svg>" alt="Muhammed Haseeb" class="hero-avatar" id="heroImg">
                     </div>
@@ -1111,7 +1218,7 @@
                 <h2>Mastering Hardware Electronics</h2>
             </div>
             <div class="about-grid">
-                <div class="glass-card reveal">
+                <div class="glass-card reveal-left">
                     <h3 style="margin-bottom: 1rem;" class="gradient-text">L4 Micro-soldering Expert</h3>
                     <p style="color: var(--text-secondary); margin-bottom: 1rem;">
                         With over 8 years of dedicated experience in advanced smartphone motherboard architecture, I specialize in diagnosing and solving complex hardware failures that standard service centers write off.
@@ -1120,7 +1227,7 @@
                         Logical Service Engineer with extraordinary troubleshooting skills in CPU Reballing, Upper/Lower board swapping, Wi-Fi IC, Network IC, eMMC, NAND, PMIC unbinding, and full stack coding literacy for web and diagnostic tools.
                     </p>
                 </div>
-                <div class="reveal">
+                <div class="reveal-right">
                     <h3 style="margin-bottom: 1rem;">Core Specialization</h3>
                     <div class="specialties-grid">
                         <div class="specialty-item"><i class="fa-solid fa-microchip"></i> CPU Reballing (L4)</div>
@@ -1176,7 +1283,7 @@
                 <h2>Technical Capabilities</h2>
             </div>
             <div class="skills-grid">
-                <div class="glass-card reveal">
+                <div class="glass-card reveal-left">
                     <h3 style="margin-bottom: 1.5rem;" class="gradient-text">Hardware & Chip Level</h3>
                     <div class="skill-item">
                         <div class="skill-info"><span>Android Repair</span><span>99%</span></div>
@@ -1199,7 +1306,7 @@
                         <div class="skill-bar-bg"><div class="skill-bar-fill" data-progress="97%"></div></div>
                     </div>
                 </div>
-                <div class="glass-card reveal">
+                <div class="glass-card reveal-right">
                     <h3 style="margin-bottom: 1.5rem;" class="gradient-text">Memory, Software & Web</h3>
                     <div class="skill-item">
                         <div class="skill-info"><span>UFS & eMMC Memory Repair</span><span>96%</span></div>
@@ -1251,7 +1358,7 @@
                 <h2>Work Experience</h2>
             </div>
             <div class="timeline">
-                <div class="timeline-item timeline-left reveal">
+                <div class="timeline-item timeline-left reveal-left">
                     <div class="glass-card">
                         <span class="timeline-badge">08/2024 - Present</span>
                         <h3>Service Engineer</h3>
@@ -1259,7 +1366,7 @@
                         <p style="font-size: 0.9rem; color: var(--text-secondary);">Normal Android/iPhone fast display fixes, Level 2 to Level 3 motherboard work, iCloud server unlocking, and KG Finance / MDM server services.</p>
                     </div>
                 </div>
-                <div class="timeline-item timeline-right reveal">
+                <div class="timeline-item timeline-right reveal-right">
                     <div class="glass-card">
                         <span class="timeline-badge">12/2021 - 04/2024</span>
                         <h3>Service Engineer</h3>
@@ -1267,7 +1374,7 @@
                         <p style="font-size: 0.9rem; color: var(--text-secondary);">Non-genuine display message repairs, 15-minute express repairs, R&D collaboration for iCloud bypasses, web dev (HTML/CSS/JS/jQuery), gaming PC assembling, and console/controller/laptop repairs.</p>
                     </div>
                 </div>
-                <div class="timeline-item timeline-left reveal">
+                <div class="timeline-item timeline-left reveal-left">
                     <div class="glass-card">
                         <span class="timeline-badge">06/2020 - 12/2021</span>
                         <h3>L4 Service Engineer</h3>
@@ -1275,7 +1382,7 @@
                         <p style="font-size: 0.9rem; color: var(--text-secondary);">Managed a team of 14 employees overseeing hiring and training, executed tight-deadline chip repairs, and solved advanced hardware issues in a fast-paced environment.</p>
                     </div>
                 </div>
-                <div class="timeline-item timeline-right reveal">
+                <div class="timeline-item timeline-right reveal-right">
                     <div class="glass-card">
                         <span class="timeline-badge">03/2020 - 05/2020</span>
                         <h3>Mobile Software Expert</h3>
@@ -1283,7 +1390,7 @@
                         <p style="font-size: 0.9rem; color: var(--text-secondary);">Advanced data recovery using forensic software without data loss, firmware flashing, temporary/permanent iCloud unlocks, KG Finance unlocks, country lock removals, and worldwide remote unlocking services.</p>
                     </div>
                 </div>
-                <div class="timeline-item timeline-left reveal">
+                <div class="timeline-item timeline-left reveal-left">
                     <div class="glass-card">
                         <span class="timeline-badge">02/2018 - 02/2020</span>
                         <h3>Service Engineer (L3 to L4)</h3>
@@ -1291,7 +1398,7 @@
                         <p style="font-size: 0.9rem; color: var(--text-secondary);">Upgraded service engineer level from L3 to L4 through advanced troubleshooting and precision chip-level motherboard work.</p>
                     </div>
                 </div>
-                <div class="timeline-item timeline-right reveal">
+                <div class="timeline-item timeline-right reveal-right">
                     <div class="glass-card">
                         <span class="timeline-badge">12/2017 - 01/2018</span>
                         <h3>Service Engineer</h3>
@@ -1299,7 +1406,7 @@
                         <p style="font-size: 0.9rem; color: var(--text-secondary);">Completed intensive L1, L2, and L3 training, delivering chip-level hardware repair and deep-level iPhone service.</p>
                     </div>
                 </div>
-                <div class="timeline-item timeline-left reveal">
+                <div class="timeline-item timeline-left reveal-left">
                     <div class="glass-card">
                         <span class="timeline-badge">01/2017 - 11/2018</span>
                         <h3>Service Engineer (L1)</h3>
@@ -1424,7 +1531,7 @@
         <!-- Qualifications, Languages & Interests -->
         <section id="qualifications">
             <div class="about-grid">
-                <div class="glass-card reveal">
+                <div class="glass-card reveal-left">
                     <h3 style="margin-bottom: 1.5rem;" class="gradient-text"><i class="fa-solid fa-certificate"></i> Certifications</h3>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
                         <li style="display: flex; gap: 0.75rem; align-items: center;"><i class="fa-solid fa-award" style="color:var(--accent-cyan);"></i> Diploma in Smartphone Engineering (Sizcom)</li>
@@ -1432,7 +1539,7 @@
                         <li style="display: flex; gap: 0.75rem; align-items: center;"><i class="fa-solid fa-award" style="color:var(--accent-cyan);"></i> Offenso Certified Security Analyst (OCSA)</li>
                     </ul>
                 </div>
-                <div class="glass-card reveal">
+                <div class="glass-card reveal-right">
                     <h3 style="margin-bottom: 1.5rem;" class="gradient-text"><i class="fa-solid fa-language"></i> Languages & Interests</h3>
                     <div style="margin-bottom: 1rem; font-weight: 600; color: var(--text-secondary);">Languages Known:</div>
                     <div class="tags-cloud" style="margin-bottom: 1.5rem;">
@@ -1458,7 +1565,7 @@
                 <h2>Contact & Consultations</h2>
             </div>
             <div class="contact-grid">
-                <div class="glass-card reveal">
+                <div class="glass-card reveal-left">
                     <h3>Direct Details</h3>
                     <p style="color: var(--text-secondary); margin-top: 0.5rem;">Reach out for repair consultations, hardware inquiries, or software projects.</p>
                     
@@ -1494,7 +1601,7 @@
                     </div>
                 </div>
 
-                <div class="glass-card reveal">
+                <div class="glass-card reveal-right">
                     <h3>Send Message Directly</h3>
                     <form class="contact-form" id="contactForm" action="https://formspree.io/f/muhammedhaseeb9645@gmail.com" method="POST">
                         <div class="form-group">
@@ -1543,7 +1650,7 @@
         <span id="toastMsg">Message sent successfully!</span>
     </div>
 
-    <!-- Vanilla JavaScript -->
+    <!-- Vanilla JavaScript with Pro Animations -->
     <script>
         // PDF Download Trigger Function
         function downloadPDF() {
@@ -1597,6 +1704,51 @@
         }
         document.addEventListener('DOMContentLoaded', typeEffect);
 
+        // PRO ANIMATION 1: Interactive Click Ripple Effect on elements
+        document.addEventListener('click', function (e) {
+            const target = e.target.closest('.glass-card, .btn, .tag-pill, .specialty-item, .info-card');
+            if (target) {
+                const rect = target.getBoundingClientRect();
+                const ripple = document.createElement('span');
+                const diameter = Math.max(rect.width, rect.height);
+                const radius = diameter / 2;
+
+                ripple.style.width = ripple.style.height = `${diameter}px`;
+                ripple.style.left = `${e.clientX - rect.left - radius}px`;
+                ripple.style.top = `${e.clientY - rect.top - radius}px`;
+                ripple.classList.add('ripple');
+
+                const existingRipple = target.getElementsByClassName('ripple')[0];
+                if (existingRipple) {
+                    existingRipple.remove();
+                }
+
+                target.appendChild(ripple);
+            }
+        });
+
+        // PRO ANIMATION 2: 3D Interactive Tilt on Hover for Glass Cards
+        const glassCards = document.querySelectorAll('.glass-card');
+        glassCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -8;
+                const rotateY = ((x - centerX) / centerX) * 8;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
+            });
+        });
+
         // Custom Cursor & Mouse Glow Tracking
         const cursorDot = document.getElementById('cursorDot');
         const cursorOutline = document.getElementById('cursorOutline');
@@ -1618,10 +1770,12 @@
             mouseGlow.style.top = `${posY}px`;
         });
 
-        // Interactive Particle Canvas
+        // Interactive & Parallax Particle Canvas
         const canvas = document.getElementById('particle-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
+        let mouseX = 0;
+        let mouseY = 0;
 
         function resizeCanvas() {
             canvas.width = window.innerWidth;
@@ -1629,6 +1783,11 @@
         }
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
 
         class Particle {
             constructor() {
@@ -1642,6 +1801,15 @@
             update() {
                 this.x += this.speedX;
                 this.y += this.speedY;
+
+                // Subtle parallax push from mouse position
+                const dx = mouseX - this.x;
+                const dy = mouseY - this.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 100) {
+                    this.x -= dx * 0.01;
+                    this.y -= dy * 0.01;
+                }
 
                 if (this.x > canvas.width) this.x = 0;
                 if (this.x < 0) this.x = canvas.width;
@@ -1701,10 +1869,12 @@
             });
         });
 
-        // Scroll Progress & Navbar Dynamic State
+        // PRO ANIMATION 3: Scroll Progress, Navbar Active States & Back To Top
         const scrollProgress = document.getElementById('scrollProgress');
         const navbar = document.getElementById('navbar');
         const backToTop = document.getElementById('backToTop');
+        const sections = document.querySelectorAll('section');
+        const navAnchorLinks = document.querySelectorAll('.nav-links a');
 
         window.addEventListener('scroll', () => {
             const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
@@ -1723,14 +1893,30 @@
             } else {
                 backToTop.classList.remove('show');
             }
+
+            // Scrollspy Active Links Update
+            let currentSec = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                if (scrollPos >= sectionTop) {
+                    currentSec = section.getAttribute('id');
+                }
+            });
+
+            navAnchorLinks.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === `#${currentSec}`) {
+                    a.classList.add('active');
+                }
+            });
         });
 
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Scroll Reveal & Animations Observer
-        const revealElements = document.querySelectorAll('.reveal');
+        // PRO ANIMATION 4: Multi-Directional Scroll Reveal Observer
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
         const skillBars = document.querySelectorAll('.skill-bar-fill');
         const counterNumbers = document.querySelectorAll('.stat-number');
         let animatedCounters = false;
