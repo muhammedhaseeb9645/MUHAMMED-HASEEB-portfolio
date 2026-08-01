@@ -31,8 +31,8 @@
       "@type": "Person",
       "name": "Muhammed Haseeb HA",
       "jobTitle": "Senior Smartphone Hardware Engineer",
-      "telephone": ["+918089461833", "+917034512710"],
-      "email": "muhammedhaseeb8590@gmail.com",
+      "telephone": ["[REDACTED]", "[REDACTED]"],
+      "email": "[REDACTED]",
       "url": "https://www.mhtechword.blogspot.com",
       "address": {
         "@type": "PostalAddress",
@@ -100,6 +100,14 @@
             --text-muted: #94a3b8;
             
             --accent-glow: rgba(6, 182, 212, 0.15);
+        }
+
+        /* Privacy Blur Effect */
+        .blurred-sensitive {
+            filter: blur(6px);
+            user-select: none;
+            transition: filter 0.3s ease;
+            display: inline-block;
         }
 
         /* Base & Reset Styles */
@@ -1186,7 +1194,7 @@
                         "Repairing Technology Beyond Limits" &mdash; Logical Service Engineer offering over 10+ years of experience performing CPU Reballing, Upper & Lowerboard Swapping, Wi-Fi IC, Network IC, eMMC, NAND, PMIC repairs, equipment installation, inspection, and assembly.
                     </p>
                     <div class="hero-btns">
-                        <a href="https://wa.me/+918089461833" target="_blank" class="btn btn-primary">
+                        <a href="https://wa.me/" target="_blank" class="btn btn-primary">
                             <i class="fa-brands fa-whatsapp"></i> Quick Consultation
                         </a>
                         <a href="#projects" class="btn btn-secondary">
@@ -1263,7 +1271,7 @@
                 <div class="info-grid">
                     <div class="info-card">
                         <div class="label">Date of Birth</div>
-                        <div class="val">18-04-1996</div>
+                        <div class="val"><span class="blurred-sensitive">18-04-1996</span></div>
                     </div>
                     <div class="info-card">
                         <div class="label">Nationality</div>
@@ -1279,11 +1287,11 @@
                     </div>
                     <div class="info-card">
                         <div class="label">Passport No.</div>
-                        <div class="val">Y2757677</div>
+                        <div class="val"><span class="blurred-sensitive">Y2757677</span></div>
                     </div>
                     <div class="info-card">
                         <div class="label">Passport Expiry</div>
-                        <div class="val">26-05-2034</div>
+                        <div class="val"><span class="blurred-sensitive">26-05-2034</span></div>
                     </div>
                 </div>
             </div>
@@ -1595,18 +1603,18 @@
                     <p style="color: var(--text-secondary); margin-top: 0.5rem;">Reach out for repair consultations, hardware inquiries, or software projects.</p>
                     
                     <div class="contact-info-list">
-                        <a href="https://wa.me/+918089461833" target="_blank" class="contact-info-item">
+                        <a href="https://wa.me/" target="_blank" class="contact-info-item">
                             <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div>
                                 <div style="font-size: 0.8rem; color: var(--text-muted);">Phone & WhatsApp</div>
-                                <div>+91 8089461833  +91 7034512710</div>
+                                <div class="blurred-sensitive">+91 8089461833  +91 7034512710</div>
                             </div>
                         </a>
                         <a href="mailto:muhammedhaseeb8590@gmail.com" class="contact-info-item">
                             <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
                             <div>
                                 <div style="font-size: 0.8rem; color: var(--text-muted);">Email</div>
-                                <div>muhammedhaseeb8590@gmail.com</div>
+                                <div class="blurred-sensitive">muhammedhaseeb8590@gmail.com</div>
                             </div>
                         </a>
                         <a href="http://www.mhtechword.blogspot.com" target="_blank" class="contact-info-item">
@@ -1957,9 +1965,19 @@
 
         revealElements.forEach(el => revealObserver.observe(el));
 
+        // Toast display helper
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.innerText = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
         // Fixed Contact Form Handler
         const contactForm = document.getElementById('contactForm');
-        const toast = document.getElementById('toast');
         const submitBtn = document.getElementById('submitBtn');
 
         if (contactForm) {
@@ -1983,32 +2001,15 @@
                         showToast('Message sent successfully!');
                         contactForm.reset();
                     } else {
-                        // Direct WhatsApp fallback if Formspree ID is not yet initialized
-                        const name = document.getElementById('name').value;
-                        const msg = document.getElementById('message').value;
-                        const waUrl = `https://wa.me/+918089461833?text=${encodeURIComponent('Name: ' + name + '\nMessage: ' + msg)}`;
-                        window.open(waUrl, '_blank');
-                        showToast('Redirected to WhatsApp!');
+                        showToast('Error sending message.');
                     }
                 } catch (err) {
-                    showToast('Connection error. Directing to WhatsApp...');
-                    const name = document.getElementById('name').value;
-                    const msg = document.getElementById('message').value;
-                    const waUrl = `https://wa.me/+918089461833?text=${encodeURIComponent('Name: ' + name + '\nMessage: ' + msg)}`;
-                    window.open(waUrl, '_blank');
+                    showToast('Connection error.');
                 } finally {
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
                 }
             });
-        }
-
-        function showToast(msg) {
-            document.getElementById('toastMsg').innerText = msg;
-            toast.classList.add('show');
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 4000);
         }
     </script>
 </body>
